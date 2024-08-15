@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now - Clarke's Personal Development</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="Imagenes/Logo2.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="MainPage.html" class="logo-link">
+                <img src="Imagenes/Logo1.png" alt="Personal Training Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="MainPage.html#Home">Home</a></li>
+                    <li><a href="MainPage.html#Soccer">Soccer</a></li>
+                    <li><a href="MainPage.html#Tutoring">Spanish Tutoring</a></li>
+                    <li><a href="MainPage.html#Basketball">Basketball</a></li>
+                    <li><a href="MainPage.html#Fitness">Fitness</a></li>
+                    <li><a href="MainPage.html#About us">About us</a></li>
+                    <li><a href="MainPage.html#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://www.instagram.com/clarkespersonaldevelopment/" class="instagram-btn" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </header>
+    <section class="apply section-t">
+        <h2 class="text-animate">Apply Now</h2>
+        <form action="https://formspree.io/f/xblrgnnz" method="POST" class="application-form text-animate">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality:</label>
+                    <input type="text" id="nationality" name="nationality" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="mobile-number" name="mobile-number" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile-number">Mobile Number:</label>
+                    <input type="text" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="availability">Availability :</label>
+                    <textarea id="availability" name="availability" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dominant-foot">Level in Spanish:</label>
+                    <select id="dominant-foot" name="dominant-foot" required>
+                        <option value="left">Just starting</option>
+                        <option value="right">Beginner</option>
+                        <option value="left">Conversational</option>
+                        <option value="right">Fluent</option>
+                        <option value="right">Not sure</option>
+                    </select>
+                </div>
+                 <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Personal Training. All rights reserved.</p>
+    </footer>
+    <script src="./Script.js"></script>
+</body>
+</html>

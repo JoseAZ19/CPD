@@ -1,0 +1,896 @@
+/* Reset básico para asegurar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    --scrollbar-width: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url("/Imagenes/main\ page\ art3.jpg");
+    background-size: cover;
+    z-index: -1; /* Asegúrate de que la superposición esté detrás del contenido */
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Superposición oscura con opacidad */
+    z-index: -1; /* Asegúrate de que la superposición esté detrás del contenido */
+}
+
+/* Estilos generales para las secciones */
+.section {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    min-height: 100vh; /* Asegura que cada sección tenga al menos la altura de la ventana */
+}
+
+.section.visible {
+    opacity: 1;
+}
+
+.text-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.text-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Encabezado */
+header {
+    background: #e65319;
+    color: #d7e6df;
+    padding: 0px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    display: flex; /* Asegúrate de que header use flexbox */
+    align-items: center; /* Alinea verticalmente los elementos dentro de header */
+}    
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el logo y la navegación */
+    max-width: 2200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.instagram-btn {
+    background-color: #0c0c0c;
+    color: white;
+    padding: 10px 12px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%; /* Hace que el botón sea circular */
+    width: 40px; /* Ajusta el ancho para que sea un círculo */
+    height: 40px; /* Ajusta la altura para que sea un círculo */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.instagram-btn i {
+    margin-right: 1px;
+}
+
+nav {
+    scroll-margin-block-end: auto; /* Añadir esta línea */
+}
+
+.logo-link {
+    position: relative;
+    display: inline-block;
+}
+
+.logo {
+    width: 60px; /* Ajusta el tamaño según tu logo */
+    height: auto;
+    display: block;
+    transition: all 0.3s ease; /* Transición suave para el efecto de subrayado */
+}
+
+.logo-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px; /* Altura de la línea de subrayado */
+    background: #080808; /* Color del subrayado */
+    position: absolute;
+    bottom: -5px; /* Ajusta la posición vertical del subrayado */
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover::after {
+    transform: scaleX(1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Estilo de navegación */
+nav {
+    display: flex; /* Alinea los elementos dentro del nav horizontalmente */
+    justify-content: flex-end; /* Alinea el contenido del nav a la derecha */
+    flex-grow: 1; /* Permite que el nav crezca para llenar el espacio disponible */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Elimina el margen */
+    display: flex; /* Alinea los elementos de navegación horizontalmente */
+}
+
+nav ul li {
+    margin: 0 50px; /* Espacio entre los elementos de navegación */
+    display: inline; /* Muestra los elementos de la lista en una línea */
+}
+
+nav ul li a {
+    color: #0d0c0c;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-family: Impact;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+/* Secciones */
+section {
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Sección principal */
+.main {
+
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    color: #fff; /* Cambia el color del texto para que contraste con la imagen de fondo */
+    height: 100vh;
+}
+
+.main h2 {
+    margin-bottom: 20px;
+    font-size: 8em;
+    color: #f7f6f6;
+    text-align: center;
+}
+
+.main p {
+    margin-bottom: 20px;
+    font-size: 3em;
+    line-height: 1.8;
+    color: #e6531e;
+}
+
+/* Sección de Soccer */
+.Soccer {
+    background-image: url("/Imagenes/Soccer.jpg");
+    background-color: #f7f7f7;
+    background-size: cover;
+    padding: 20px;
+    margin: 0; /* Eliminar márgenes entre secciones */
+    text-align: center;
+}
+
+.Soccer h2 {
+    font-size: 2em;
+    color: #e6531e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Soccer .service {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.Soccer .service h3 {
+    font-size: 1.5em;
+    color: #e6531e;
+}
+
+.Soccer .service p {
+    font-size: 1.5em;
+    color: #f9f7f6;
+}
+
+.Soccer blockquote {
+    font-size: 1.2em;
+    margin: 20px auto;
+    padding: 10px;
+    border-left: 4px solid #e6531e;
+    background: #fff;
+    max-width: 600px;
+
+}
+.soccer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.course-info {
+    flex: 1;
+    max-width: 400px; /* Ajusta el ancho máximo del contenedor */
+    height: 550px; /* Ajusta la altura del carrusel */
+    padding: 1rem;
+    background: #070707;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+    color: #fff; /* Texto blanco */
+}
+
+.course-info h2 {
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+    margin-bottom: 0.5rem;
+}
+
+.course-info p {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+}
+
+.image-slider {
+    flex: 1;
+    max-width: 700px; /* Ajusta el ancho máximo del carrusel */
+    height: 550px; /* Ajusta la altura del carrusel */
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes se ajusten al contenedor */
+    display: block;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #e6531e;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem; /* Tamaño del texto de los botones */
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+button.prev:hover,
+button.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Tutoring */
+.Tutoring {
+    background-image: url("Imagenes/Tutoring1.jpg");
+    background-size: cover;
+    background-color: #eee;
+    padding: 20px;
+    margin: 0; /* Eliminar márgenes entre secciones */
+
+}
+
+.Tutoring h2 {
+    font-size: 13em;
+    color: #e6531e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.Tutoring p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    line-height: 1.8;
+    color: #fcfcfc;
+
+
+}
+.Tutoring blockquote {
+    font-size: 1.5em;
+    margin: 20px auto;
+    padding: 10px;
+    border-left: 4px solid e6531e;
+    background: #fff;
+    max-width: 800px;
+}
+
+.tutoring-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  
+}
+
+.course-info-t{
+    flex: 1;
+    max-width: 700px; /* Ajusta el ancho máximo del contenedor */
+    padding: 1rem;
+    background: #070707;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    flex-direction: column; /* Permite alinear el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.course-info-t h2 {
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+    margin-bottom: 0.25rem; /* Reduce el margen inferior del título */
+}
+
+.course-info-t p {
+    font-size: 0.875rem; /* Reduce el tamaño del texto */
+    margin-bottom: 0.5rem; /* Ajusta el margen inferior del texto para reducir la altura total */
+    text-align: center; /* Centra el texto */
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #e6531e;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Asegura que el botón se centre */
+}
+
+.apply-button:hover {
+    background-color: #d14919;
+}
+
+
+/* Basketball */
+.Basketball {
+    background-image: url("Imagenes/Basketball.jpg");
+    background-color: #f7f7f7;
+    background-size: cover;
+    padding: 20px;
+    margin: 0; /* Eliminar márgenes entre secciones */
+    text-align: center;
+
+}
+
+.Basketball h2 {
+    font-size: 15em;
+    color: #e6531e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.Basketball p {
+    margin-bottom: 20px;
+    font-size: 10em;
+    line-height: 1.8;
+    color: #e6531e;
+
+}
+
+.Basketball blockquote {
+    font-size: 1.2em;
+    margin: 20px auto;
+    padding: 10px;
+    border-left: 4px solid #e6531e;
+    background: #fff;
+    max-width: 800px;
+}
+
+/* Fitnees */
+.Fitness {
+    background-image: url("Imagenes/Fitness.jpg");
+    background-color: #f7f7f7;
+    background-size: cover;
+    padding: 20px;
+    margin: 0; /* Eliminar márgenes entre secciones */
+    text-align: center;
+
+}
+
+.Fitness h2 {
+    font-size: 15em;
+    color: #e6531e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.Fitness p {
+    margin-bottom: 20px;
+    font-size: 10em;
+    line-height: 1.8;
+    color: #e6531e;
+
+}
+
+.Fitness blockquote {
+    font-size: 1.2em;
+    margin: 20px auto;
+    padding: 10px;
+    border-left: 4px solid #e6531e;
+    background: #fff;
+    max-width: 800px;
+}
+
+
+/* About us */
+.about-us {
+    background-image: url("Imagenes/S1.jpg");
+    background-color: #f7f7f7;
+    background-size: cover;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 3em; /* Reducido */
+    color: #e6531e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    margin-bottom: 20px;
+    font-size: 1.2em; /* Reducido */
+    line-height: 1.6;
+    color: #fafafa;
+    font-size: 1.5em;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-track .course-info-about {
+    display: none;
+}
+
+.carousel-track .course-info-about.active {
+    display: block;
+}
+
+
+.about-us-container {
+    display: flex;
+    flex-direction: row; /* Organiza los carruseles en filas */
+    gap: 2rem; /* Espacio entre el carrusel de cuadros y el de imágenes */
+    align-items: center; /* Alinea ambos carruseles verticalmente */
+    justify-content: center; /* Centra ambos carruseles horizontalmente */
+}
+
+.carousel-track {
+    flex: 1;
+    max-width: 600px; /* Ajusta el ancho máximo para el carrusel de cuadros */
+    overflow: hidden;
+    background-color: #070707;
+    border-radius: 8px;
+}
+
+.course-info-about {
+    padding: 1rem;
+    color: #fff; /* Texto blanco */
+    text-align: center;
+}
+
+.image-slider-about {
+    flex: 1;
+    max-width: 700px; /* Ajusta el ancho máximo para el carrusel de imágenes */
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+}
+
+.slides-about img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #e6531e;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Sección de Contact */
+.Contact {
+    background-image: url("Imagenes/S4.1.jpg");
+    background-color: #0a0a0a;
+    background-size: cover;
+    padding: 20px;
+    margin: 0; /* Eliminar márgenes entre secciones */
+    text-align: center;
+}
+
+.Contact h2 {
+    font-size: 2em;
+    color: #e6531e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Contact .service {
+    margin-bottom: 20px;
+}
+
+.Contact .service h3 {
+    font-size: 1.5em;
+    color: #e6531e;
+}
+
+.Contact .service p {
+    font-size: 1.1em;
+}
+
+.Contact blockquote {
+    font-size: 1.2em;
+    margin: 20px auto;
+    padding: 10px;
+    border-left: 4px solid #e6531e;
+    background: #fff;
+    max-width: 800px;
+
+}
+
+
+
+
+/* Pie de página */
+footer {
+    background: #121212;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    background: #e6531e;
+}
+
+
+
+.align-right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+/* Animaciones de transición */
+.section {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.section.visible {
+    opacity: 1;
+}
+
+/* Añadir animación de deslizamiento si lo prefieres */
+.section.slide-in {
+    transform: translateY(50px);
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.section.slide-in.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animaciones de transición para el texto */
+.text-animate {
+    opacity: 0;
+    transform: translateY(10px); /* Ajusta la distancia del desplazamiento */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.text-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Estilos del formulario */
+.application-form {
+    background: #040404;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f6f6f6;
+}
+
+.application-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background: #e6531e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: #d1431a;
+}
+
+/* Estilos de la sección de solicitud */
+.apply {
+    padding: 20px;
+
+}
+
+.apply h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Pie de página */
+footer {
+    background: #121212;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*  APPLY */
+
+.apply-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #e6531e;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #d14919;
+}
+
+.apply.section {
+    background-image:url("Imagenes/Soccer.jpg");
+    background-size: cover; /* Ajusta la imagen para que se contenga dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    padding: 50px;
+    text-align: center;
+}
+
+.apply.section-t {
+    background-image: url("Imagenes/.jpg");
+    background-size: cover; /* Ajusta la imagen para que se contenga dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    padding: 50px;
+    text-align: center;
+}
+
+.apply h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #e6531e;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #e6531e;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #d14919;
+}
+
+/* Contact session */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 40px; /* Aumentar la separación */
+}
+
+.contact-item {
+    text-align: center;
+    background-color: #060606;
+    opacity: 0.8;
+    padding: 80px; /* Aumentar el padding */
+    border-radius: 10px;
+    width: 80%; /* Aumentar el ancho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif; /* Cambiar la fuente */
+    font-size: 18px; /* Ajustar el tamaño de la fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #d4736f; /* Color del texto */
+}
+
+.contact-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #e6531e; /* Color del ícono */
+}
+
+.contact-item p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #ffffff; /* Color del texto dentro del párrafo */
+}
+
+
