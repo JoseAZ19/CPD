@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x.x'  # Cambia esta línea a la versión correcta de Node.js que necesitas
+          node-version: '20.x'  # Cambiado a '20.x' para especificar una versión válida
 
       - name: Fetch project data
         uses: ionos-deploy-now/project-action@v1
@@ -31,8 +31,6 @@ jobs:
           service-host: api-us.ionos.space
           project-id: 1be6abe7-f576-4788-9c04-7242df9477fd
           action: retrieve-info
-
-
 
   build:
     name: build
