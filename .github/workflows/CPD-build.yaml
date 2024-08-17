@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: v22.11.0
+          node-version: v18.x
 
       - name: Build Node assets
         env:
