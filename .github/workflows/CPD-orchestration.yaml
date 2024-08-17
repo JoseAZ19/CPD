@@ -18,13 +18,10 @@ jobs:
       deployment-enabled: ${{ fromJson(steps.project.outputs.info).deployment-enabled }}
       branch-id: ${{ fromJson(steps.project.outputs.info).branch-id }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18.x' # Cambia a una versión válida de Node.js
+          node-version: '20.x.x'  # Cambia esta línea a la versión correcta de Node.js que necesitas
 
       - name: Fetch project data
         uses: ionos-deploy-now/project-action@v1
