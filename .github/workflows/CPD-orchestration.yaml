@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'  # Cambiado a '20.x' para especificar una versión válida
+          node-version: '18.x'  # Cambiado a '20.x' para especificar una versión válida
 
       - name: Fetch project data
         uses: ionos-deploy-now/project-action@v1
