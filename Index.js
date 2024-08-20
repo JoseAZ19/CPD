@@ -8,7 +8,7 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'Public')));
 
 // Ruta para servir la página HTML
-app.get('/', (req, res) => {
+app.get('https://clarkespersonaldevelopment.com/Public/MainPage.html/', (req, res) => {
     res.sendFile(path.join(__dirname, 'Public', 'MainPage.html'));
 });
 
