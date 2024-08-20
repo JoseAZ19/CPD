@@ -8,11 +8,11 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'Public')));
 
 // Ruta para servir la página HTML
-app.get('https://clarkespersonaldevelopment.com/Public/MainPage.html/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'Public', 'MainPage.html'));
 });
 
 // Iniciar el servidor
 app.listen(port, () => {
-    console.log(`Servidor escuchando en https://clarkespersonaldevelopment.com/Public/MainPage.html`);
+    console.log(`Servidor escuchando en http://localhost:${port}`);
 });
