@@ -152,6 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Cambia el cuadro cada 5 segundos (5000 milisegundos)
-    setInterval(showNextSlide, 8000);
+    setInterval(showNextSlide, 20000);
 });
 
