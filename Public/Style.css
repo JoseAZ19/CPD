@@ -346,7 +346,7 @@ button.next:hover {
 .Tutoring p {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 1.5em;
+    font-size: 1.em;
     line-height: 1.8;
     color: #fcfcfc;
 
@@ -387,7 +387,7 @@ button.next:hover {
 }
 
 .course-info-t p {
-    font-size: 0.875rem; /* Reduce el tamaño del texto */
+    font-size: 1.5em; /* Ajusta el tamaño del texto */
     margin-bottom: 0.5rem; /* Ajusta el margen inferior del texto para reducir la altura total */
     text-align: center; /* Centra el texto */
 }
