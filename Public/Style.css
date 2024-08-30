@@ -98,7 +98,7 @@ header {
     font-size: 18px;
     display: flex;
     align-items: center;
-    border-radius: 50%; /* Hace que el botón sea circular */
+    border-radius: 60%; /* Hace que el botón sea circular */
     width: 40px; /* Ajusta el ancho para que sea un círculo */
     height: 40px; /* Ajusta la altura para que sea un círculo */
     text-align: center; /* Asegura que el texto esté centrado */
@@ -175,53 +175,130 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+/* Estilos personalizados para la cabecera */
+.custom-header {
+    background-color: #e65319; /* Color de fondo */
+}
+
+/* Estilos personalizados para la barra de navegación */
+.custom-navbar {
+    border-bottom: 2px solid #333; /* Línea de separación */
+    padding-top: 0; /* Reduce el grosor superior */
+    padding-bottom: 0; /* Reduce el grosor inferior */
+}
+
+/* Estilos para los elementos del menú */
+.custom-nav .nav-item {
+    margin: 0 10px; /* Margen entre los elementos */
+}
+
+.custom-nav-link {
+    color: #060606; /* Color del texto */
+    font-weight: bold; /* Peso del texto */
+    text-transform: uppercase; /* Mayúsculas */
+    font-family: Arial, sans-serif; /* Fuente Arial */
+    padding: 8px 0; /* Reduce el relleno para hacer la barra más delgada */
+}
+
+/* Cambiar el color al pasar el ratón */
+.custom-nav-link:hover {
+    color: #007bff; /* Cambia a color azul */
+}
+
+/* Alineación del logo a la izquierda */
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* Ajusta el tamaño según tus necesidades */
+    margin-right: 10px; /* Margen derecho para separar del menú */
+}
+
+
+
+
+/* Sección principal */
 /* Secciones */
 section {
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
     overflow: hidden;
 }
 
 /* Sección principal */
 .main {
-
+    background-image: url('./Imagenes/your-background-image.jpg'); /* Asegúrate de usar la ruta correcta de tu imagen */
     background-size: cover; /* Asegura que la imagen cubra toda la sección */
     background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen de fondo en su lugar */
     color: #fff; /* Cambia el color del texto para que contraste con la imagen de fondo */
-    height: 100vh;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Alinea el texto al centro */
+    padding: 0 15px; /* Espacio alrededor del contenido para móviles */
 }
 
+/* Títulos */
 .main h2 {
     margin-bottom: 20px;
-    font-size: 8em;
+    font-size: 4rem; /* Ajustado para mejor responsividad */
     color: #f7f6f6;
-    text-align: center;
 }
 
+/* Párrafos */
 .main p {
     margin-bottom: 20px;
-    font-size: 3em;
+    font-size: 1.5rem; /* Ajustado para mejor responsividad */
     line-height: 1.8;
     color: #e6531e;
 }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .main h2 {
+        font-size: 3rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    .main p {
+        font-size: 1.25rem; /* Ajusta el tamaño del párrafo para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .main h2 {
+        font-size: 2rem; /* Ajusta el tamaño del texto para pantallas muy pequeñas */
+    }
+
+    .main p {
+        font-size: 1rem; /* Ajusta el tamaño del párrafo para pantallas muy pequeñas */
+    }
+}
+
+
 
 /* Sección de Soccer */
 .Soccer {
     background-image: url("/Imagenes/Soccer.jpg");
     background-color: #f7f7f7;
     background-size: cover;
+    background-position: center;
     padding: 20px;
     margin: 0; /* Eliminar márgenes entre secciones */
     text-align: center;
 }
 
 .Soccer h2 {
-    font-size: 2em;
+    font-size: 2.5em; /* Ajusta el tamaño del título */
     color: #e6531e;
     text-align: center;
     margin-bottom: 20px;
@@ -249,8 +326,8 @@ section {
     border-left: 4px solid #e6531e;
     background: #fff;
     max-width: 600px;
-
 }
+
 .soccer-container {
     display: flex;
     flex-wrap: wrap;
@@ -258,33 +335,32 @@ section {
 }
 
 .course-info {
-    flex: 1;
-    max-width: 400px; /* Ajusta el ancho máximo del contenedor */
-    height: 550px; /* Ajusta la altura del carrusel */
-    padding: 1rem;
     background: #070707;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
     color: #fff; /* Texto blanco */
+    padding: 2rem; /* Aumenta el padding para hacer el cuadro más grande */
+    max-width: 500px; /* Aumenta el ancho máximo del contenedor */
+    margin: auto; /* Centra el contenedor */
 }
 
 .course-info h2 {
-    font-size: 1.5rem; /* Ajusta el tamaño del título */
+    font-size: 2rem; /* Ajusta el tamaño del título */
     margin-bottom: 0.5rem;
 }
 
 .course-info p {
-    font-size: 1rem; /* Ajusta el tamaño del texto */
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
 }
 
 .image-slider {
-    flex: 1;
-    max-width: 700px; /* Ajusta el ancho máximo del carrusel */
-    height: 550px; /* Ajusta la altura del carrusel */
     position: relative;
     overflow: hidden;
     background: #fff;
     border-radius: 8px;
+    max-width: 800px; /* Ancho máximo del carrusel */
+    height: 500px; /* Ajusta la altura del carrusel para hacerlo más alargado */
+    margin: auto; /* Centra el contenedor */
 }
 
 .slides {
@@ -295,7 +371,7 @@ section {
 
 .image-slider img {
     width: 100%;
-    height: 100%;
+    height: 100%; /* Ajusta la altura para que cubra todo el contenedor */
     object-fit: cover; /* Asegura que las imágenes se ajusten al contenedor */
     display: block;
 }
@@ -311,15 +387,15 @@ button.next {
     padding: 0.5rem;
     cursor: pointer;
     z-index: 10;
-    font-size: 1.5rem; /* Tamaño del texto de los botones */
+    font-size: 2rem; /* Tamaño del texto de los botones */
 }
 
 button.prev {
-    left: 0;
+    left: 10px;
 }
 
 button.next {
-    right: 0;
+    right: 10px;
 }
 
 button.prev:hover,
@@ -327,49 +403,78 @@ button.next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
-/* Tutoring */
+/* Ajuste para pantallas pequeñas */
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .course-info {
+        max-width: 100%; /* Ajusta el ancho máximo en pantallas pequeñas */
+        height: auto; /* Ajusta la altura en pantallas pequeñas */
+        padding: 1rem; /* Ajusta el padding en pantallas pequeñas */
+        box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    }
+
+    .image-slider {
+        max-width: 100%; /* Ajusta el ancho máximo en pantallas pequeñas */
+        height: auto; /* Ajusta la altura en pantallas pequeñas */
+        overflow: hidden; /* Asegura que el contenido no se desborde */
+        position: relative; /* Asegura que el contenido esté posicionado correctamente */
+    }
+
+    .image-slider img {
+        width: 100%; /* Asegura que la imagen ocupe el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarla */
+    }
+}
+
+
 .Tutoring {
     background-image: url("Imagenes/Tutoring1.jpg");
     background-size: cover;
     background-color: #eee;
     padding: 20px;
-    margin: 0; /* Eliminar márgenes entre secciones */
-
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    text-align: center; /* Centra el texto en toda la sección */
 }
 
+/* Ajuste para el título */
 .Tutoring h2 {
-    font-size: 13em;
+    font-size: 3em; /* Ajusta el tamaño del título para que se vea bien en la pantalla */
     color: #e6531e;
-    text-align: center;
     margin-bottom: 20px;
 }
+
+/* Ajuste para el párrafo */
 .Tutoring p {
-    text-align: center;
     margin-bottom: 20px;
-    font-size: 1.em;
+    font-size: 1.2em; /* Ajusta el tamaño del texto */
     line-height: 1.8;
     color: #fcfcfc;
-
-
 }
+
+/* Ajuste para el blockquote */
 .Tutoring blockquote {
     font-size: 1.5em;
     margin: 20px auto;
     padding: 10px;
-    border-left: 4px solid e6531e;
+    border-left: 4px solid #e6531e; /* Color del borde corregido */
     background: #fff;
     max-width: 800px;
+    text-align: center; /* Centra el texto dentro del blockquote */
 }
 
+/* Ajuste para el contenedor de tutoring */
 .tutoring-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Alinea el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
     gap: 1rem;
-  
+    max-width: 1000px; /* Asegura que el contenedor no sea más ancho que esto */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
-.course-info-t{
-    flex: 1;
+/* Ajuste para la información del curso */
+.course-info-t {
     max-width: 700px; /* Ajusta el ancho máximo del contenedor */
     padding: 1rem;
     background: #070707;
@@ -379,19 +484,10 @@ button.next:hover {
     display: flex;
     flex-direction: column; /* Permite alinear el contenido en columna */
     align-items: center; /* Centra el contenido horizontalmente */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
-.course-info-t h2 {
-    font-size: 1.5rem; /* Ajusta el tamaño del título */
-    margin-bottom: 0.25rem; /* Reduce el margen inferior del título */
-}
-
-.course-info-t p {
-    font-size: 1.5em; /* Ajusta el tamaño del texto */
-    margin-bottom: 0.5rem; /* Ajusta el margen inferior del texto para reducir la altura total */
-    text-align: center; /* Centra el texto */
-}
-
+/* Ajuste para el botón de aplicar */
 .apply-button {
     display: inline-block;
     padding: 10px 20px;
@@ -415,24 +511,24 @@ button.next:hover {
     background-image: url("Imagenes/Basketball.jpg");
     background-color: #f7f7f7;
     background-size: cover;
+    background-position: center; /* Centra la imagen de fondo */
     padding: 20px;
-    margin: 0; /* Eliminar márgenes entre secciones */
+    margin: 0; /* Elimina márgenes entre secciones */
     text-align: center;
-
 }
 
 .Basketball h2 {
-    font-size: 15em;
+    font-size: 15em; /* Tamaño grande para computadoras */
     color: #e6531e;
     text-align: center;
     margin-bottom: 20px;
 }
+
 .Basketball p {
     margin-bottom: 20px;
-    font-size: 10em;
+    font-size: 10em; /* Tamaño grande para computadoras */
     line-height: 1.8;
     color: #e6531e;
-
 }
 
 .Basketball blockquote {
@@ -444,29 +540,42 @@ button.next:hover {
     max-width: 800px;
 }
 
-/* Fitnees */
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .Basketball h2 {
+        font-size: 4em; /* Tamaño ajustado para dispositivos móviles */
+    }
+
+    .Basketball p {
+        font-size: 2.5em; /* Tamaño ajustado para dispositivos móviles */
+    }
+}
+
+/* Fitness */
 .Fitness {
     background-image: url("Imagenes/Fitness.jpg");
     background-color: #f7f7f7;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 20px;
     margin: 0; /* Eliminar márgenes entre secciones */
     text-align: center;
-
 }
 
+/* Tamaño de fuente para computadoras */
 .Fitness h2 {
-    font-size: 15em;
+    font-size: 15em; /* Tamaño grande para pantallas de computadora */
     color: #e6531e;
     text-align: center;
     margin-bottom: 20px;
 }
+
 .Fitness p {
-    margin-bottom: 20px;
-    font-size: 10em;
+    font-size: 10em; /* Tamaño grande para pantallas de computadora */
     line-height: 1.8;
     color: #e6531e;
-
+    margin-bottom: 20px;
 }
 
 .Fitness blockquote {
@@ -478,12 +587,25 @@ button.next:hover {
     max-width: 800px;
 }
 
+/* Cambios para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .Fitness h2 {
+        font-size: 3rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .Fitness p {
+        font-size: 2rem; /* Tamaño más pequeño para móviles */
+    }
+}
+
 
 /* About us */
 .about-us {
     background-image: url("Imagenes/S1.jpg");
     background-color: #f7f7f7;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 20px;
     margin: 0;
     text-align: center;
@@ -501,7 +623,6 @@ button.next:hover {
     font-size: 1.2em; /* Reducido */
     line-height: 1.6;
     color: #fafafa;
-    font-size: 1.5em;
 }
 
 .carousel-track {
@@ -517,7 +638,6 @@ button.next:hover {
 .carousel-track .course-info-about.active {
     display: block;
 }
-
 
 .about-us-container {
     display: flex;
@@ -581,47 +701,123 @@ button.next:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .about-us h2 {
+        font-size: 2rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .about-us p {
+        font-size: 1rem; /* Tamaño más pequeño para móviles */
+    }
+
+    .carousel-track {
+        max-width: 100%; /* Ajusta el ancho máximo para móviles */
+    }
+
+    .image-slider-about {
+        max-width: 100%; /* Ajusta el ancho máximo para móviles */
+    }
+}
 
 
-/* Sección de Contact */
+
+/* Sección de Contacto */
 .Contact {
     background-image: url("Imagenes/S4.jpg");
     background-color: #0a0a0a;
     background-size: cover;
-    padding: 20px;
+    padding: 40px; /* Aumenta el padding para más espacio alrededor */
     margin: 0; /* Eliminar márgenes entre secciones */
     text-align: center;
 }
 
-.Contact h2 {
-    font-size: 2em;
-    color: #e6531e;
-    text-align: center;
-    margin-bottom: 20px;
+.Contact .contact-container {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar los cuadros verticalmente */
+    align-items: center; /* Centra los cuadros horizontalmente */
+    gap: 20px; /* Añade espacio entre los cuadros */
 }
 
-.Contact .service {
-    margin-bottom: 20px;
+.Contact .contact-item {
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para resaltar el texto */
+    padding: 30px; /* Aumenta el padding para hacer los cuadros más grandes */
+    border-radius: 8px;
+    color: #fff; /* Texto blanco */
+    max-width: 400px; /* Ajusta el ancho máximo de los cuadros */
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Asegura que los cuadros ocupen el 100% del ancho disponible */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste al contenedor */
 }
 
-.Contact .service h3 {
-    font-size: 1.5em;
-    color: #e6531e;
+.Contact .contact-item i {
+    font-size: 2.5em; /* Tamaño del ícono */
+    margin-bottom: 15px;
 }
 
-.Contact .service p {
-    font-size: 1.1em;
+.Contact .contact-item p {
+    font-size: 1em; /* Reduce el tamaño del texto para ajustarse mejor al contenedor */
+    line-height: 1.4;
 }
 
-.Contact blockquote {
-    font-size: 1.2em;
-    margin: 20px auto;
-    padding: 10px;
-    border-left: 4px solid #e6531e;
-    background: #fff;
-    max-width: 800px;
-
+.Contact .contact-item a {
+    color: #fff; /* Color blanco para el enlace del correo */
+    text-decoration: none;
+    display: inline-block; /* Asegura que el enlace sea un bloque en línea */
+    word-wrap: break-word; /* Ajusta el enlace dentro del contenedor */
+    font-size: 1em; /* Tamaño del texto del enlace */
 }
+
+.Contact .contact-item a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+}
+
+
+/* Estilos específicos para móviles */
+@media (max-width: 768px) {
+    .Contact {
+        padding: 10px;
+    }
+
+    .Contact h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Coloca los elementos en una columna */
+        gap: 10px; /* Espacio entre los elementos */
+    }
+
+    .Contact .contact-item {
+        flex: 1;
+        max-width: 90%; /* Ajusta el ancho máximo en móviles */
+        margin: 10px auto; /* Ajusta el margen */
+        padding: 10px;
+        box-sizing: border-box; /* Asegura que el padding no haga que el contenido se desborde */
+        text-align: center; /* Centra el texto */
+    }
+
+    .Contact .contact-item i {
+        font-size: 1.5em;
+    }
+
+    .Contact .contact-item p {
+        font-size: 0.9em; /* Reduce el tamaño del texto para que quepa mejor */
+        overflow-wrap: break-word; /* Permite que el texto largo se divida para evitar desbordamientos */
+    }
+
+    .Contact .contact-item a {
+        color: #fff; /* Asegura que el texto del correo sea blanco */
+        font-size: 0.9em; /* Reduce el tamaño del texto del enlace */
+        display: block; /* Hace que el enlace ocupe toda la línea */
+        word-wrap: break-word; /* Permite que el texto largo se divida para evitar desbordamientos */
+    }
+}
+
+
+
+
 
 
 
@@ -783,7 +979,9 @@ footer {
 }
 
 
-/*  APPLY */
+/* APPLY */
+
+/* APPLY */
 
 .apply-button {
     display: inline-block;
@@ -802,41 +1000,96 @@ footer {
 }
 
 .apply.section {
-    background-image:url("Imagenes/Soccer.jpg");
+    background-image: url("Imagenes/Soccer.jpg");
     background-size: cover; /* Ajusta la imagen para que se contenga dentro del contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen dentro del contenedor */
     padding: 50px;
     text-align: center;
+    color: #fff; /* Ajusta el color del texto si es necesario para el fondo oscuro */
 }
 
+.apply h2 {
+    margin-top: 50px; /* Ajusta el margen superior del título */
+    font-size: 2.5em; /* Ajusta el tamaño de la fuente del título */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .apply.section {
+        padding: 20px; /* Reduce el padding en pantallas pequeñas */
+        text-align: left; /* Ajusta la alineación del texto */
+    }
+
+    .apply h2 {
+        margin-top: 30px; /* Ajusta el margen superior del título en pantallas pequeñas */
+        font-size: 1.8em; /* Ajusta el tamaño de la fuente del título en pantallas pequeñas */
+    }
+
+    .application-form {
+        padding: 0; /* Elimina el padding para pantallas pequeñas */
+    }
+
+    .form-group {
+        margin-bottom: 1rem; /* Ajusta el margen entre los grupos de formulario */
+    }
+
+    .form-control {
+        font-size: 0.9em; /* Ajusta el tamaño de la fuente en los campos del formulario */
+    }
+
+    .btn.apply-button {
+        font-size: 1em; /* Ajusta el tamaño de la fuente del botón en pantallas pequeñas */
+        padding: 8px 16px; /* Ajusta el padding del botón */
+    }
+}
+
+
+
+/* Sección de aplicación para Tutoring */
+/* Asegura que html y body ocupen toda la altura de la ventana */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sección de aplicación para Tutoring */
 .apply.section-t {
-    background-image:url("Imagenes/Tutoring1.jpg");
-    background-size: cover; /* Ajusta la imagen para que se contenga dentro del contenedor */
+    background-image: url("Imagenes/Tutoring1.jpg");
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen dentro del contenedor */
     padding: 50px;
     text-align: center;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+    margin: 0; /* Elimina márgenes externos */
 }
 
+/* Estilo para el título */
 .apply h2 {
     margin-bottom: 20px;
     font-size: 2.5em;
     color: #e6531e;
 }
 
+/* Estilo para los grupos de formulario */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* Estilo para las etiquetas del formulario */
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
+/* Estilo para los campos del formulario */
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 10px;
     font-size: 1em;
@@ -844,6 +1097,7 @@ footer {
     border-radius: 5px;
 }
 
+/* Estilo para el botón de envío */
 button[type="submit"] {
     padding: 10px 20px;
     background-color: #e6531e;
@@ -855,9 +1109,37 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
+/* Estilo para el botón de envío al pasar el ratón por encima */
 button[type="submit"]:hover {
     background-color: #d14919;
 }
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+    .apply.section-t {
+        padding: 20px;
+    }
+
+    .apply h2 {
+        font-size: 1.8em;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 0.9em;
+    }
+
+    button[type="submit"] {
+        font-size: 1em;
+    }
+}
+
+
 
 /* Contact session */
 .contact-container {

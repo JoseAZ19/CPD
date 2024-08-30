@@ -6,147 +6,180 @@
     
     <title>Clarke´s Personal Development</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./Imagenes/Logo2.png" class="logo">
-    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="./Style.css"> <!-- Mantén tu CSS después de Bootstrap para que tenga prioridad -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
     
-    <header>
-        <div class="header-container">
-            <a href="#" class="logo-link">
-                <img src="./Imagenes/Logo1.png" alt="Personal Training Logo" class="logo">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#Soccer">Soccer</a></li>
-                    <li><a href="#Tutoring"> Spanish/English Tutoring</a></li>
-                    <li><a href="#Basketball">Basketball</a></li>
-                    <li><a href="#Fitness">Fitness</a></li>
-                    <li><a href="#About us">About us</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
+    <header class="py-2 custom-header">
+        <div class="container">
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand-lg navbar-light p-0 custom-navbar">
+                <!-- Logo alineado a la izquierda -->
+                <a href="#" class="navbar-brand logo-link mr-3">
+                    <img src="./Imagenes/Logo1.png" alt="Personal Training Logo" class="logo">
+                </a>
+    
+                <!-- Botón de menú para pantallas pequeñas -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Contenido del menú -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto custom-nav">
+                        <li class="nav-item"><a href="#Home" class="nav-link custom-nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#Soccer" class="nav-link custom-nav-link">Soccer</a></li>
+                        <li class="nav-item"><a href="#Tutoring" class="nav-link custom-nav-link">Spanish/English Tutoring</a></li>
+                        <li class="nav-item"><a href="#Basketball" class="nav-link custom-nav-link">Basketball</a></li>
+                        <li class="nav-item"><a href="#Fitness" class="nav-link custom-nav-link">Fitness</a></li>
+                        <li class="nav-item"><a href="#About us" class="nav-link custom-nav-link">About us</a></li>
+                        <li class="nav-item"><a href="#Contact" class="nav-link custom-nav-link">Contact</a></li>
+                    </ul>
+                    <!-- Botón de Instagram -->
+                    <a href="https://www.instagram.com/clarkespersonaldevelopment/" class="btn instagram-btn ml-2" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </nav>
-            <a href="https://www.instagram.com/clarkespersonaldevelopment/" class="instagram-btn" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            
         </div>
     </header>
-
     
-    <section class="main section" id="Home">
-        <h2 class="text-animate">Clarke´s Personal Development</h2>
-        <p class="text-animate">Get ready to transform your life with personalized training and guidance.</p>
-    </section>
-    <section class="Soccer section" id="Soccer">
-        <div class="soccer-container">
-            <!-- Información del curso -->
-            <div class="course-info">
-                <h2 class="text-animate">Our Soccer Course</h2>
-                <p class="text-animate">We provide personal training sessions for groups and individuals, with a licensed coach. Our sessions focus on the particular needs of each group or player. We can help you with specific skill sets or follow a program that we implement. Each training session will work on proper technique and conditioning to improve player skill and self confidence.</p>
-                    <br>
-                    <br>
-                <p class="text-animate">Please feel free to contact us to discuss rates and schedule.</p>
-                <a href="apply.html" class="apply-button">Apply Now</a>
-            </div>
-              <!-- Cuadro de imágenes con carrusel -->
-        <div class="image-slider">
-            <div class="slides">
-                <img src="Imagenes/S1.jpg" alt="Soccer Image 1">
-                <img src="Imagenes/S2.jpg" alt="Soccer Image 2">
-                <img src="Imagenes/S4.jpg" alt="Soccer Image 4">
-                <img src="Imagenes/S5.1.jpeg" alt="Soccer Image 5">
-            </div>
-            <!-- Botones de navegación -->
-            <button class="prev">&lt;</button>
-            <button class="next">&gt;</button>
+    <section class="main section text-center py-5" id="Home">
+        <div class="container">
+            <h2 class="text-animate">Clarke´s Personal Development</h2>
+            <p class="text-animate">Get ready to transform your life with personalized training and guidance.</p>
         </div>
     </section>
-
-    <section class="Tutoring section" id="Tutoring">
-        <div class="tutoring-container">
-            <!-- Información del curso -->
-        <div class="course-info-t">
-            <h2 class="text-animate">Spanish/English tutoring</h2>
-            <p class="text-animate">We offer unlimited one-on-one Spanish and English classes with native teachers via video chat and have the skill and training experience to assess the needs of each student and gear the lesson to those needs. Our objective is to provide outstanding quality Spanish tutoring to a variety of different groups: from soccer oriented people that are in need to learn a new language to college or school students and younger learners (beginners) that are in need of tutoring</p>
-            <br>
-            <br>
-            <p class="text-animate">Please feel free to contact us to discuss rates and schedule.</p>
-            <a href="ApplyTutoring.html" class="apply-button">Apply Now</a>
-    </div>
-</div>
-    </section>
-
     
-    <section class="Basketball section" id="Basketball">
+
+    <section class="Soccer section py-5" id="Soccer">
+        <div class="container soccer-container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 course-info">
+                    <h2 class="text-animate">Our Soccer Course</h2>
+                    <p class="text-animate">We provide personal training sessions for groups and individuals, with a licensed coach. Our sessions focus on the particular needs of each group or player. We can help you with specific skill sets or follow a program that we implement. Each training session will work on proper technique and conditioning to improve player skill and self confidence.</p>
+                    <p class="text-animate">Please feel free to contact us to discuss rates and schedule.</p>
+                    <a href="apply.html" class="apply-button btn btn-primary">Apply Now</a>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="image-slider">
+                        <div class="slides">
+                            <img src="Imagenes/S1.jpg" alt="Soccer Image 1" class="img-fluid">
+                            <img src="Imagenes/S2.jpg" alt="Soccer Image 2" class="img-fluid">
+                            <img src="Imagenes/S4.jpg" alt="Soccer Image 4" class="img-fluid">
+                            <img src="Imagenes/S5.1.jpeg" alt="Soccer Image 5" class="img-fluid">
+                        </div>
+                        <button class="prev">&lt;</button>
+                        <button class="next">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+<section class="Tutoring section py-5" id="Tutoring">
+    <div class="container tutoring-container">
+        <div class="row">
+            <div class="col course-info-t">
+                <h2 class="text-animate">Spanish/English tutoring</h2>
+                <p class="text-animate">We offer unlimited one-on-one Spanish and English classes with native teachers via video chat and have the skill and training experience to assess the needs of each student and gear the lesson to those needs. Our objective is to provide outstanding quality Spanish tutoring to a variety of different groups: from soccer oriented people that are in need to learn a new language to college or school students and younger learners (beginners) that are in need of tutoring</p>
+                <p class="text-animate">Please feel free to contact us to discuss rates and schedule.</p>
+                <a href="ApplyTutoring.html" class="apply-button btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="Basketball section py-5" id="Basketball">
+    <div class="container text-center">
         <h2 class="text-animate">Basketball</h2>
         <p class="text-animate">Coming Soon...</p>
-    </section>
-    <section class="Fitness section" id="Fitness">
+    </div>
+</section>
+
+<section class="Fitness section py-5" id="Fitness">
+    <div class="container text-center">
         <h2 class="text-animate">Fitness</h2>
         <p class="text-animate">Coming Soon...</p>
-    </section>
+    </div>
+</section>
 
-    <section class="about-us section" id="About us">
-        <div class="about-us-container">
-            <!-- Carrusel de Cuadros -->
-            <div class="carousel-track">
-                <div class="course-info-about">
-                    <h2 class="text-animate">About Us</h2>
-                    <p class="text-animate">Clarke’s Personal Development (CPD) provides elite soccer development to beginner athletes, who require more personalized guidance on correcting technical mistakes. CPD’s goal is to have each athlete develop confidence in their individual skills and value their abilities. Emphasis is placed on defensive and dribbling techniques which gives our young players the ability to hone their skills.
-                        CPD also provides conversational Spanish tutoring, with experienced Spanish tutors. in order to assist with any potential language barriers preventing anyone from achieving their ultimate goal. Join us today and start learning! (Needs to be worked on)</p>
+
+
+<section class="about-us section py-5" id="AboutUs">
+    <div class="container text-center">
+        <!-- Carrusel de Cuadros -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="carousel-track">
+                    <div class="course-info-about">
+                        <h2 class="text-animate">About Us</h2>
+                        <p class="text-animate">Clarke’s Personal Development (CPD) provides elite soccer development to beginner athletes, who require more personalized guidance on correcting technical mistakes. CPD’s goal is to have each athlete develop confidence in their individual skills and value their abilities. Emphasis is placed on defensive and dribbling techniques which gives our young players the ability to hone their skills.
+                            CPD also provides conversational Spanish tutoring, with experienced Spanish tutors. in order to assist with any potential language barriers preventing anyone from achieving their ultimate goal. Join us today and start learning! (Needs to be worked on)</p>
+                    </div>
+                    <div class="course-info-about">
+                        <h2 class="text-animate">Mission</h2>
+                        <p class="text-animate">Our mission is to bring out the very best in aspiring athletes.  Help them visualize their abilities, and opportunities for greatness on and off the field. With a focus on instilling the values of hard work, self-confidence, discipline, faith, consistency and passion..
+                            CPD also provides conversational Spanish tutoring, with experienced Spanish tutors. in order to assist with any potential language barriers preventing anyone from achieving their ultimate goal. Join us today and start learning! (Needs to be worked on)</p>
+                    </div>
+                    <div class="course-info-about">
+                        <h2 class="text-animate">Vision</h2>
+                        <p class="text-animate">Our mission is to bring out the very best in aspiring athletes.  Help them visualize their abilities, and opportunities for greatness on and off the field. With a focus on instilling the values of hard work, self-confidence, discipline, faith, consistency and passion..
+                            CPD also provides conversational Spanish tutoring, with experienced Spanish tutors. in order to assist with any potential language barriers preventing anyone from achieving their ultimate goal. Join us today and start learning! (Needs to be worked on,)</p>
+                    </div>
                 </div>
-                <div class="course-info-about">
-                    <h2 class="text-animate">Mission</h2>
-                    <p class="text-animate">Our mission is to bring out the very best in aspiring athletes.  Help them visualize the their abilities, and opportunities for greatness on and off the field. With a focus on instilling the values of hard work, self-confidence, discipline, faith, consistency and passion..
-                        CPD also provides conversational Spanish tutoring, with experienced Spanish tutors. in order to assist with any potential language barriers preventing anyone from achieving their ultimate goal. Join us today and start learning! (Needs to be worked on)</p>
-                </div>
-                <div class="course-info-about">
-                    <h2 class="text-animate">Vision</h2>
-                    <p class="text-animate">Our mission is to bring out the very best in aspiring athletes.  Help them visualize the their abilities, and opportunities for greatness on and off the field. With a focus on instilling the values of hard work, self-confidence, discipline, faith, consistency and passion..
-                        CPD also provides conversational Spanish tutoring, with experienced Spanish tutors. in order to assist with any potential language barriers preventing anyone from achieving their ultimate goal. Join us today and start learning! (Needs to be worked on,)</p>
-                </div>
-                
             </div>
             
             <!-- Carrusel de Imágenes -->
-            <div class="image-slider-about">
-                <div class="slides-about">
-                    <img src="Imagenes/S3.jpg" alt="About us Image 3">
+            <div class="col-md-6">
+                <div class="image-slider-about">
+                    <div class="slides-about">
+                        <img src="Imagenes/S3.jpg" alt="About us Image 3">
+                    </div>
+                    <!-- Botones de navegación -->
+                    <button class="prev">&lt;</button>
+                    <button class="next">&gt;</button>
                 </div>
-                <!-- Botones de navegación -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-   <!-- Sección de Contacto -->
-   <section class="Contact section" id="Contact">
+
+  <!-- Sección de Contacto -->
+<section class="Contact section" id="Contact">
     <div class="text-animate">
-    <div class="contact-container">
-        <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <p><strong>Dirección:
-                <br>  
-            </strong>Portsmouth, VA</p>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <p><strong>Email:</strong> <a href="mailto:Clarkespersonaldevelopment@gmail.com">Clarkespersonaldevelopment@gmail.com</a></p>
-
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <p><strong>Teléfono:
-                <br>  
-            </strong>(757) 337-1813</p>
+        <div class="contact-container">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Dirección:</strong><br>Portsmouth, VA</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Email:</strong> 
+                    <a href="mailto:Clarkespersonaldevelopment@gmail.com">Clarkespersonaldevelopment@gmail.com</a>
+                </p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p><strong>Teléfono:</strong><br>(757) 337-1813</p>
+            </div>
         </div>
     </div>
-</div>
 </section>
+
+
 
 
     <footer>
