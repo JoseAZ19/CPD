@@ -1017,10 +1017,6 @@ footer {
     color: #fff; /* Ajusta el color del texto si es necesario para el fondo oscuro */
 }
 
-.apply h2 {
-    margin-top: 50px; /* Ajusta el margen superior del título */
-    font-size: 2.5em; /* Ajusta el tamaño de la fuente del título */
-}
 /* Asegura que los campos tengan suficiente altura */
 .form-control {
     height: auto; /* Permite que la altura se ajuste automáticamente */
@@ -1034,6 +1030,11 @@ footer {
     padding: 10px 20px; /* Añade espacio interno para mejorar la apariencia */
     font-size: 16px; /* Tamaño de fuente consistente */
 }
+.apply h2 {
+    margin-top: 50px; /* Ajusta el margen superior del título */
+    font-size: 2.5em; /* Ajusta el tamaño de la fuente del título */
+}
+
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
