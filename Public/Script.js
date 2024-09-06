@@ -132,26 +132,70 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
    // About us cuadros
-document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona todos los cuadros
+   document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los cuadros del carrusel
     const slides = document.querySelectorAll('.carousel-track .course-info-about');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
     let currentIndex = 0;
+    let autoSlideInterval;
 
-    // Asegúrate de que el primer cuadro sea visible al cargar la página
+    // Muestra el primer cuadro al cargar la página
     slides[currentIndex].classList.add('active');
 
-    function showNextSlide() {
-        // Oculta el cuadro actual
-        slides[currentIndex].classList.remove('active');
-        
-        // Calcula el siguiente índice
-        currentIndex = (currentIndex + 1) % slides.length;
-        
-        // Muestra el siguiente cuadro
-        slides[currentIndex].classList.add('active');
+    function showSlide(index) {
+        // Oculta todos los cuadros
+        slides.forEach(slide => slide.classList.remove('active'));
+        // Muestra el cuadro en el nuevo índice
+        slides[index].classList.add('active');
+        currentIndex = index;
     }
 
-    // Cambia el cuadro cada 5 segundos (5000 milisegundos)
-    setInterval(showNextSlide, 20000);
+    function showNextSlide() {
+        // Calcula el siguiente índice
+        const nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+
+    function showPrevSlide() {
+        // Calcula el índice anterior
+        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(prevIndex);
+    }
+
+    // Manejadores de eventos para los botones
+    nextButton.addEventListener('click', () => {
+        showNextSlide();
+        resetAutoSlide();
+    });
+
+    prevButton.addEventListener('click', () => {
+        showPrevSlide();
+        resetAutoSlide();
+    });
+
+    // Función para iniciar el carrusel automático
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(showNextSlide, 20000); // 20 segundos
+    }
+
+    // Función para reiniciar el carrusel automático
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+
+    // Inicia el carrusel automático
+    startAutoSlide();
 });
 
+//Script para cerrar el menú al hacer clic en un enlace -->
+
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+            var navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    });

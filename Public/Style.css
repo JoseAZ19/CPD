@@ -674,6 +674,14 @@ button.next:hover {
     border-radius: 8px;
 }
 
+.course-info-about {
+    display: none; /* Oculta todos los cuadros inicialmente */
+}
+
+.course-info-about.active {
+    display: block; /* Muestra solo el cuadro activo */
+}
+
 button.prev,
 button.next {
     position: absolute;
@@ -1012,6 +1020,19 @@ footer {
 .apply h2 {
     margin-top: 50px; /* Ajusta el margen superior del título */
     font-size: 2.5em; /* Ajusta el tamaño de la fuente del título */
+}
+/* Asegura que los campos tengan suficiente altura */
+.form-control {
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    padding: 10px; /* Añade un espacio interno para que el texto no se vea recortado */
+    font-size: 16px; /* Ajusta el tamaño de la fuente si es necesario */
+    box-sizing: border-box; /* Incluye el padding dentro del tamaño total del campo */
+}
+
+/* Asegura que el botón de enviar tenga un buen tamaño */
+.apply-button {
+    padding: 10px 20px; /* Añade espacio interno para mejorar la apariencia */
+    font-size: 16px; /* Tamaño de fuente consistente */
 }
 
 /* Ajustes para pantallas pequeñas */
