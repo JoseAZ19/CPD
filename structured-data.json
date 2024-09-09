@@ -1,0 +1,21 @@
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Clarke's Personal Development",
+    "description": "Personalized soccer training, fitness sessions, and Spanish/English tutoring in Portsmouth, VA.",
+    "url": "https://clarkespersonaldevelopment.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Portsmouth, VA",
+      "addressLocality": "Portsmouth",
+      "addressRegion": "VA",
+      "postalCode": "23701",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-757-337-1813",
+      "contactType": "Customer Service"
+    }
+  }
+  
