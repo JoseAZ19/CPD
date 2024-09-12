@@ -2,14 +2,14 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Clarke's Personal Development",
-    "description": "Personalized soccer training, fitness sessions, and Spanish/English tutoring in Portsmouth, VA.",
+    "description": "Personalized soccer training, fitness sessions, and Spanish/English tutoring in Hampton Roads, VA.",
     "url": "https://clarkespersonaldevelopment.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Portsmouth, VA",
-      "addressLocality": "Portsmouth",
+      "streetAddress": "Hampton Roads, VA",
+      "addressLocality": "Hampton Roads",
       "addressRegion": "VA",
-      "postalCode": "23703",
+      "postalCode": "23503",
       "addressCountry": "US"
     },
     "contactPoint": {
